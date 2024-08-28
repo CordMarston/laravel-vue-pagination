@@ -435,6 +435,7 @@ function ae(e, n, t, i, l, f) {
       onPaginationChangePage: f.onPaginationChangePage
     }, {
       default: B((a) => [
+        k("Test here? "),
         a.computed.total > a.computed.perPage ? (d(), o("nav", u({ key: 0 }, e.$attrs, {
           class: "ml-2 inline-flex -space-x-px rounded-md shadow-sm isolate ltr:flex-row rtl:flex-row-reverse",
           "aria-label": "Pagination"
