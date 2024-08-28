@@ -1,4 +1,4 @@
-import { resolveComponent as w, openBlock as d, createElementBlock as o, Fragment as b, createTextVNode as k, createVNode as C, withCtx as B, mergeProps as u, normalizeClass as _, createElementVNode as s, toHandlers as h, renderSlot as P, createCommentVNode as m, renderList as U, toDisplayString as v } from "vue";
+import { resolveComponent as C, openBlock as d, createElementBlock as o, Fragment as y, createTextVNode as k, createVNode as w, withCtx as B, mergeProps as u, normalizeClass as _, createElementVNode as s, toHandlers as h, renderSlot as P, createCommentVNode as m, renderList as U, toDisplayString as v } from "vue";
 const R = {
   emits: ["pagination-change-page"],
   props: {
@@ -67,8 +67,8 @@ const R = {
         return this.lastPage;
       for (var e = this.currentPage, n = this.keepLength, t = this.lastPage, i = this.limit, l = e - i, f = e + i, p = (i + 2) * 2, a = (i + 2) * 2 - 1, r = [], c = [], x, g = 1; g <= t; g++)
         (g === 1 || g === t || g >= l && g <= f || n && g < p && e < p - 2 || n && g > t - a && e > t - a + 2) && r.push(g);
-      return r.forEach(function(y) {
-        x && (y - x === 2 ? c.push(x + 1) : y - x !== 1 && c.push("...")), c.push(y), x = y;
+      return r.forEach(function(b) {
+        x && (b - x === 2 ? c.push(x + 1) : b - x !== 1 && c.push("...")), c.push(b), x = b;
       }), c;
     }
   },
@@ -171,10 +171,10 @@ const R = {
   class: "sr-only"
 }, $ = ["tabindex"], j = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1), L = /* @__PURE__ */ s("span", { class: "sr-only" }, "Next", -1);
 function S(e, n, t, i, l, f) {
-  const p = w("RenderlessPagination");
-  return d(), o(b, null, [
+  const p = C("RenderlessPagination");
+  return d(), o(y, null, [
     k("BS4 "),
-    C(p, {
+    w(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
@@ -205,7 +205,7 @@ function S(e, n, t, i, l, f) {
               ])
             ], 16, D)
           ], 2)) : m("", !0),
-          (d(!0), o(b, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
+          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
             class: _(["page-item pagination-page-nav", { active: r == a.computed.currentPage }]),
             key: c
           }, [
@@ -284,10 +284,10 @@ const ie = /* @__PURE__ */ E(A, [["render", S]]), M = {
   }
 }, V = ["tabindex"], T = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xAB", -1), F = ["aria-current"], H = ["tabindex"], q = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1);
 function G(e, n, t, i, l, f) {
-  const p = w("RenderlessPagination");
-  return d(), o(b, null, [
+  const p = C("RenderlessPagination");
+  return d(), o(y, null, [
     k("BS5 "),
-    C(p, {
+    w(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
@@ -317,7 +317,7 @@ function G(e, n, t, i, l, f) {
               ])
             ], 16, V)
           ], 2)) : m("", !0),
-          (d(!0), o(b, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
+          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
             class: _(["page-item pagination-page-nav", { active: r == a.computed.currentPage }]),
             key: c
           }, [
@@ -375,7 +375,7 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
     itemClasses: {
       type: Array,
       default: () => [
-        "bg-white",
+        "bg-red-300",
         "text-gray-500",
         "border-gray-300",
         "hover:bg-gray-50"
@@ -384,9 +384,9 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
     activeClasses: {
       type: Array,
       default: () => [
-        "bg-blue-50",
-        "border-blue-500",
-        "text-blue-600"
+        "bg-red-50",
+        "border-red-500",
+        "text-red-600"
       ]
     }
   },
@@ -425,10 +425,10 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
   })
 ], -1);
 function ae(e, n, t, i, l, f) {
-  const p = w("RenderlessPagination");
+  const p = C("RenderlessPagination");
   return d(), o("div", J, [
     s("span", K, "Showing " + v(t.data.from) + " to " + v(t.data.to) + " of " + v(t.data.total), 1),
-    C(p, {
+    w(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
@@ -449,7 +449,7 @@ function ae(e, n, t, i, l, f) {
               X
             ])
           ], 16, Q),
-          (d(!0), o(b, null, U(a.computed.pageRange, (r, c) => (d(), o("button", u({
+          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("button", u({
             class: ["relative inline-flex items-center px-4 py-2 text-sm font-medium border focus:z-20", [
               r == a.computed.currentPage ? t.activeClasses : t.itemClasses,
               r == a.computed.currentPage ? "z-30" : ""
