@@ -1,6 +1,7 @@
 <template>
     <div class="flex">
-    <span class="text-xs self-center text-slate-700">Showing {{ data.from }} to {{ data.to }} of {{ data.total }}</span>
+    <span class="text-xs self-center text-slate-700" v-if="data.from">Showing {{ data.from }} to {{ data.to }} of {{ data.total }}</span>
+    <span class="text-xs self-center text-slate-700" v-else>No results found</span>
     <RenderlessPagination
         :data="data"
         :limit="limit"
