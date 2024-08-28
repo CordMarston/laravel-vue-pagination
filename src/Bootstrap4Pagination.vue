@@ -1,4 +1,4 @@
-<template>
+<template>BS4
     <RenderlessPagination
         :data="data"
         :limit="limit"
