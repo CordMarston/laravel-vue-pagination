@@ -1,5 +1,5 @@
-import { resolveComponent as C, openBlock as d, createElementBlock as o, Fragment as y, createTextVNode as k, createVNode as w, withCtx as B, mergeProps as u, normalizeClass as _, createElementVNode as s, toHandlers as h, renderSlot as P, createCommentVNode as m, renderList as U, toDisplayString as v } from "vue";
-const R = {
+import { resolveComponent as B, openBlock as l, createElementBlock as g, Fragment as y, createTextVNode as k, createVNode as C, withCtx as E, mergeProps as c, normalizeClass as f, createElementVNode as u, toHandlers as _, renderSlot as b, createCommentVNode as h, renderList as A, toDisplayString as P } from "vue";
+const U = {
   emits: ["pagination-change-page"],
   props: {
     data: {
@@ -25,8 +25,8 @@ const R = {
       return this.isApiResource ? this.data.meta.current_page : (e = this.data.current_page) != null ? e : null;
     },
     firstPageUrl() {
-      var e, n, t, i, l;
-      return (l = (i = (n = this.data.first_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.first_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.first) != null ? l : null;
+      var e, n, t, i, r;
+      return (r = (i = (n = this.data.first_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.first_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.first) != null ? r : null;
     },
     from() {
       var e;
@@ -37,20 +37,20 @@ const R = {
       return this.isApiResource ? this.data.meta.last_page : (e = this.data.last_page) != null ? e : null;
     },
     lastPageUrl() {
-      var e, n, t, i, l;
-      return (l = (i = (n = this.data.last_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.last_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.last) != null ? l : null;
+      var e, n, t, i, r;
+      return (r = (i = (n = this.data.last_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.last_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.last) != null ? r : null;
     },
     nextPageUrl() {
-      var e, n, t, i, l;
-      return (l = (i = (n = this.data.next_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.next_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.next) != null ? l : null;
+      var e, n, t, i, r;
+      return (r = (i = (n = this.data.next_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.next_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.next) != null ? r : null;
     },
     perPage() {
       var e;
       return this.isApiResource ? this.data.meta.per_page : (e = this.data.per_page) != null ? e : null;
     },
     prevPageUrl() {
-      var e, n, t, i, l;
-      return (l = (i = (n = this.data.prev_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.prev_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.prev) != null ? l : null;
+      var e, n, t, i, r;
+      return (r = (i = (n = this.data.prev_page_url) != null ? n : (e = this.data.meta) == null ? void 0 : e.prev_page_url) != null ? i : (t = this.data.links) == null ? void 0 : t.prev) != null ? r : null;
     },
     to() {
       var e;
@@ -65,11 +65,11 @@ const R = {
         return 0;
       if (this.limit === 0)
         return this.lastPage;
-      for (var e = this.currentPage, n = this.keepLength, t = this.lastPage, i = this.limit, l = e - i, f = e + i, p = (i + 2) * 2, a = (i + 2) * 2 - 1, r = [], c = [], x, g = 1; g <= t; g++)
-        (g === 1 || g === t || g >= l && g <= f || n && g < p && e < p - 2 || n && g > t - a && e > t - a + 2) && r.push(g);
-      return r.forEach(function(b) {
-        x && (b - x === 2 ? c.push(x + 1) : b - x !== 1 && c.push("...")), c.push(b), x = b;
-      }), c;
+      for (var e = this.currentPage, n = this.keepLength, t = this.lastPage, i = this.limit, r = e - i, p = e + i, m = (i + 2) * 2, a = (i + 2) * 2 - 1, s = [], o = [], v, d = 1; d <= t; d++)
+        (d === 1 || d === t || d >= r && d <= p || n && d < m && e < m - 2 || n && d > t - a && e > t - a + 2) && s.push(d);
+      return s.forEach(function(x) {
+        v && (x - v === 2 ? o.push(v + 1) : x - v !== 1 && o.push("...")), o.push(x), v = x;
+      }), o;
     }
   },
   methods: {
@@ -118,19 +118,19 @@ const R = {
       })
     });
   }
-}, E = (e, n) => {
+}, R = (e, n) => {
   const t = e.__vccOpts || e;
-  for (const [i, l] of n)
-    t[i] = l;
+  for (const [i, r] of n)
+    t[i] = r;
   return t;
-}, A = {
+}, D = {
   compatConfig: {
     MODE: 3
   },
   inheritAttrs: !1,
   emits: ["pagination-change-page"],
   components: {
-    RenderlessPagination: R
+    RenderlessPagination: U
   },
   props: {
     data: {
@@ -166,22 +166,22 @@ const R = {
       this.$emit("pagination-change-page", e);
     }
   }
-}, D = ["tabindex"], z = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xAB", -1), N = /* @__PURE__ */ s("span", { class: "sr-only" }, "Previous", -1), O = {
+}, O = ["tabindex"], $ = /* @__PURE__ */ u("span", { "aria-hidden": "true" }, "\xAB", -1), N = /* @__PURE__ */ u("span", { class: "sr-only" }, "Previous", -1), w = {
   key: 0,
   class: "sr-only"
-}, $ = ["tabindex"], j = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1), L = /* @__PURE__ */ s("span", { class: "sr-only" }, "Next", -1);
-function S(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
-  return d(), o(y, null, [
+}, S = ["tabindex"], j = /* @__PURE__ */ u("span", { "aria-hidden": "true" }, "\xBB", -1), z = /* @__PURE__ */ u("span", { class: "sr-only" }, "Next", -1);
+function L(e, n, t, i, r, p) {
+  const m = B("RenderlessPagination");
+  return l(), g(y, null, [
     k("BS4 "),
-    w(p, {
+    C(m, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
-      onPaginationChangePage: f.onPaginationChangePage
+      onPaginationChangePage: p.onPaginationChangePage
     }, {
-      default: B((a) => [
-        a.computed.total > a.computed.perPage ? (d(), o("ul", u({ key: 0 }, e.$attrs, {
+      default: E((a) => [
+        a.computed.total > a.computed.perPage ? (l(), g("ul", c({ key: 0 }, e.$attrs, {
           class: ["pagination", {
             "pagination-sm": t.size == "small",
             "pagination-lg": t.size == "large",
@@ -189,64 +189,64 @@ function S(e, n, t, i, l, f) {
             "justify-content-end": t.align == "right"
           }]
         }), [
-          a.computed.prevPageUrl || t.showDisabled ? (d(), o("li", {
+          a.computed.prevPageUrl || t.showDisabled ? (l(), g("li", {
             key: 0,
-            class: _(["page-item pagination-prev-nav", { disabled: !a.computed.prevPageUrl }])
+            class: f(["page-item pagination-prev-nav", { disabled: !a.computed.prevPageUrl }])
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#",
               "aria-label": "Previous",
               tabindex: !a.computed.prevPageUrl && -1
-            }, h(a.prevButtonEvents, !0)), [
-              P(e.$slots, "prev-nav", {}, () => [
-                z,
+            }, _(a.prevButtonEvents, !0)), [
+              b(e.$slots, "prev-nav", {}, () => [
+                $,
                 N
               ])
-            ], 16, D)
-          ], 2)) : m("", !0),
-          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
-            class: _(["page-item pagination-page-nav", { active: r == a.computed.currentPage }]),
-            key: c
+            ], 16, O)
+          ], 2)) : h("", !0),
+          (l(!0), g(y, null, A(a.computed.pageRange, (s, o) => (l(), g("li", {
+            class: f(["page-item pagination-page-nav", { active: s == a.computed.currentPage }]),
+            key: o
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#"
-            }, h(a.pageButtonEvents(r), !0)), [
-              k(v(r) + " ", 1),
-              r == a.computed.currentPage ? (d(), o("span", O, "(current)")) : m("", !0)
+            }, _(a.pageButtonEvents(s), !0)), [
+              k(P(s) + " ", 1),
+              s == a.computed.currentPage ? (l(), g("span", w, "(current)")) : h("", !0)
             ], 16)
           ], 2))), 128)),
-          a.computed.nextPageUrl || t.showDisabled ? (d(), o("li", {
+          a.computed.nextPageUrl || t.showDisabled ? (l(), g("li", {
             key: 1,
-            class: _(["page-item pagination-next-nav", { disabled: !a.computed.nextPageUrl }])
+            class: f(["page-item pagination-next-nav", { disabled: !a.computed.nextPageUrl }])
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#",
               "aria-label": "Next",
               tabindex: !a.computed.nextPageUrl && -1
-            }, h(a.nextButtonEvents, !0)), [
-              P(e.$slots, "next-nav", {}, () => [
+            }, _(a.nextButtonEvents, !0)), [
+              b(e.$slots, "next-nav", {}, () => [
                 j,
-                L
+                z
               ])
-            ], 16, $)
-          ], 2)) : m("", !0)
-        ], 16)) : m("", !0)
+            ], 16, S)
+          ], 2)) : h("", !0)
+        ], 16)) : h("", !0)
       ]),
       _: 3
     }, 8, ["data", "limit", "keep-length", "onPaginationChangePage"])
   ], 64);
 }
-const ie = /* @__PURE__ */ E(A, [["render", S]]), M = {
+const X = /* @__PURE__ */ R(D, [["render", L]]), V = {
   compatConfig: {
     MODE: 3
   },
   inheritAttrs: !1,
   emits: ["pagination-change-page"],
   components: {
-    RenderlessPagination: R
+    RenderlessPagination: U
   },
   props: {
     data: {
@@ -282,19 +282,19 @@ const ie = /* @__PURE__ */ E(A, [["render", S]]), M = {
       this.$emit("pagination-change-page", e);
     }
   }
-}, V = ["tabindex"], T = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xAB", -1), F = ["aria-current"], H = ["tabindex"], q = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1);
-function G(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
-  return d(), o(y, null, [
+}, M = ["tabindex"], T = /* @__PURE__ */ u("span", { "aria-hidden": "true" }, "\xAB", -1), F = ["aria-current"], H = ["tabindex"], W = /* @__PURE__ */ u("span", { "aria-hidden": "true" }, "\xBB", -1);
+function q(e, n, t, i, r, p) {
+  const m = B("RenderlessPagination");
+  return l(), g(y, null, [
     k("BS5 "),
-    w(p, {
+    C(m, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
-      onPaginationChangePage: f.onPaginationChangePage
+      onPaginationChangePage: p.onPaginationChangePage
     }, {
-      default: B((a) => [
-        a.computed.total > a.computed.perPage ? (d(), o("ul", u({ key: 0 }, e.$attrs, {
+      default: E((a) => [
+        a.computed.total > a.computed.perPage ? (l(), g("ul", c({ key: 0 }, e.$attrs, {
           class: ["pagination", {
             "pagination-sm": t.size == "small",
             "pagination-lg": t.size == "large",
@@ -302,61 +302,61 @@ function G(e, n, t, i, l, f) {
             "justify-content-end": t.align == "right"
           }]
         }), [
-          a.computed.prevPageUrl || t.showDisabled ? (d(), o("li", {
+          a.computed.prevPageUrl || t.showDisabled ? (l(), g("li", {
             key: 0,
-            class: _(["page-item pagination-prev-nav", { disabled: !a.computed.prevPageUrl }])
+            class: f(["page-item pagination-prev-nav", { disabled: !a.computed.prevPageUrl }])
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#",
               "aria-label": "Previous",
               tabindex: !a.computed.prevPageUrl && -1
-            }, h(a.prevButtonEvents, !0)), [
-              P(e.$slots, "prev-nav", {}, () => [
+            }, _(a.prevButtonEvents, !0)), [
+              b(e.$slots, "prev-nav", {}, () => [
                 T
               ])
-            ], 16, V)
-          ], 2)) : m("", !0),
-          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("li", {
-            class: _(["page-item pagination-page-nav", { active: r == a.computed.currentPage }]),
-            key: c
+            ], 16, M)
+          ], 2)) : h("", !0),
+          (l(!0), g(y, null, A(a.computed.pageRange, (s, o) => (l(), g("li", {
+            class: f(["page-item pagination-page-nav", { active: s == a.computed.currentPage }]),
+            key: o
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#"
-            }, h(a.pageButtonEvents(r), !0), {
-              "aria-current": r == a.computed.currentPage ? "page" : null
-            }), v(r), 17, F)
+            }, _(a.pageButtonEvents(s), !0), {
+              "aria-current": s == a.computed.currentPage ? "page" : null
+            }), P(s), 17, F)
           ], 2))), 128)),
-          a.computed.nextPageUrl || t.showDisabled ? (d(), o("li", {
+          a.computed.nextPageUrl || t.showDisabled ? (l(), g("li", {
             key: 1,
-            class: _(["page-item pagination-next-nav", { disabled: !a.computed.nextPageUrl }])
+            class: f(["page-item pagination-next-nav", { disabled: !a.computed.nextPageUrl }])
           }, [
-            s("a", u({
+            u("a", c({
               class: "page-link",
               href: "#",
               "aria-label": "Next",
               tabindex: !a.computed.nextPageUrl && -1
-            }, h(a.nextButtonEvents, !0)), [
-              P(e.$slots, "next-nav", {}, () => [
-                q
+            }, _(a.nextButtonEvents, !0)), [
+              b(e.$slots, "next-nav", {}, () => [
+                W
               ])
             ], 16, H)
-          ], 2)) : m("", !0)
-        ], 16)) : m("", !0)
+          ], 2)) : h("", !0)
+        ], 16)) : h("", !0)
       ]),
       _: 3
     }, 8, ["data", "limit", "keep-length", "onPaginationChangePage"])
   ], 64);
 }
-const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
+const Y = /* @__PURE__ */ R(V, [["render", q]]), G = {
   compatConfig: {
     MODE: 3
   },
   inheritAttrs: !1,
   emits: ["pagination-change-page"],
   components: {
-    RenderlessPagination: R
+    RenderlessPagination: U
   },
   props: {
     data: {
@@ -395,89 +395,17 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
       this.$emit("pagination-change-page", e);
     }
   }
-}, J = { class: "flex" }, K = { class: "text-xs self-center text-slate-700" }, Q = ["disabled"], W = /* @__PURE__ */ s("span", { class: "sr-only" }, "Previous", -1), X = /* @__PURE__ */ s("svg", {
-  class: "w-5 h-5",
-  "aria-hidden": "true",
-  xmlns: "http://www.w3.org/2000/svg",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  "stroke-width": "1.5",
-  stroke: "currentColor"
-}, [
-  /* @__PURE__ */ s("path", {
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    d: "M15.75 19.5L8.25 12l7.5-7.5"
-  })
-], -1), Y = ["aria-current", "disabled"], Z = ["disabled"], ee = /* @__PURE__ */ s("span", { class: "sr-only" }, "Next", -1), te = /* @__PURE__ */ s("svg", {
-  class: "w-5 h-5",
-  "aria-hidden": "true",
-  xmlns: "http://www.w3.org/2000/svg",
-  fill: "none",
-  viewBox: "0 0 24 24",
-  "stroke-width": "1.5",
-  stroke: "currentColor"
-}, [
-  /* @__PURE__ */ s("path", {
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round",
-    d: "M8.25 4.5l7.5 7.5-7.5 7.5"
-  })
-], -1);
-function ae(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
-  return d(), o("div", J, [
-    s("span", K, "Showing " + v(t.data.from) + " to " + v(t.data.to) + " of " + v(t.data.total), 1),
-    w(p, {
-      data: t.data,
-      limit: t.limit,
-      "keep-length": t.keepLength,
-      onPaginationChangePage: f.onPaginationChangePage
-    }, {
-      default: B((a) => [
-        k("Test here? "),
-        a.computed.total > a.computed.perPage ? (d(), o("nav", u({ key: 0 }, e.$attrs, {
-          class: "ml-2 inline-flex -space-x-px rounded-md shadow-sm isolate ltr:flex-row rtl:flex-row-reverse",
-          "aria-label": "Pagination"
-        }), [
-          s("button", u({
-            class: ["relative inline-flex items-center px-2 py-2 text-sm font-medium border rounded-l-md focus:z-20 disabled:opacity-50", t.itemClasses],
-            disabled: !a.computed.prevPageUrl
-          }, h(a.prevButtonEvents, !0)), [
-            P(e.$slots, "prev-nav", {}, () => [
-              W,
-              X
-            ])
-          ], 16, Q),
-          (d(!0), o(y, null, U(a.computed.pageRange, (r, c) => (d(), o("button", u({
-            class: ["relative inline-flex items-center px-4 py-2 text-sm font-medium border focus:z-20", [
-              r == a.computed.currentPage ? t.activeClasses : t.itemClasses,
-              r == a.computed.currentPage ? "z-30" : ""
-            ]],
-            "aria-current": a.computed.currentPage ? "page" : null,
-            key: c
-          }, h(a.pageButtonEvents(r), !0), {
-            disabled: r === a.computed.currentPage
-          }), v(r), 17, Y))), 128)),
-          s("button", u({
-            class: ["relative inline-flex items-center px-2 py-2 text-sm font-medium border rounded-r-md focus:z-20 disabled:opacity-50", t.itemClasses],
-            disabled: !a.computed.nextPageUrl
-          }, h(a.nextButtonEvents, !0)), [
-            P(e.$slots, "next-nav", {}, () => [
-              ee,
-              te
-            ])
-          ], 16, Z)
-        ], 16)) : m("", !0)
-      ]),
-      _: 3
-    }, 8, ["data", "limit", "keep-length", "onPaginationChangePage"])
+}, I = { class: "flex" }, J = { class: "text-xs self-center text-slate-700" };
+function K(e, n, t, i, r, p) {
+  return l(), g("div", I, [
+    u("span", J, "Showing " + P(t.data.from) + " to " + P(t.data.to) + " of " + P(t.data.total), 1),
+    k(" WTF ")
   ]);
 }
-const se = /* @__PURE__ */ E(I, [["render", ae]]);
+const Z = /* @__PURE__ */ R(G, [["render", K]]);
 export {
-  ie as Bootstrap4Pagination,
-  re as Bootstrap5Pagination,
-  R as RenderlessPagination,
-  se as TailwindPagination
+  X as Bootstrap4Pagination,
+  Y as Bootstrap5Pagination,
+  U as RenderlessPagination,
+  Z as TailwindPagination
 };
