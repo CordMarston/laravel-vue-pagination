@@ -1,4 +1,6 @@
 <template>
+    <div class="flex">
+    <span class="text-xs self-center text-slate-700">Showing {{ data.from }} to {{ data.to }} of {{ data.total }}</span>
     <RenderlessPagination
         :data="data"
         :limit="limit"
@@ -8,7 +10,7 @@
     >
         <nav
             v-bind="$attrs"
-            class="inline-flex -space-x-px rounded-md shadow-sm isolate ltr:flex-row rtl:flex-row-reverse"
+            class="ml-2 inline-flex -space-x-px rounded-md shadow-sm isolate ltr:flex-row rtl:flex-row-reverse"
             aria-label="Pagination"
             v-if="slotProps.computed.total > slotProps.computed.perPage"
         >
@@ -62,6 +64,7 @@
             </button>
         </nav>
     </RenderlessPagination>
+    </div>
 </template>
 
 <script>
