@@ -99,7 +99,7 @@ export default {
         itemClasses: {
             type: Array,
             default: () => [
-                'bg-red-300',
+                'bg-white',
                 'text-gray-500',
                 'border-gray-300',
                 'hover:bg-gray-50',

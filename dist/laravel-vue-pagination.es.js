@@ -1,4 +1,4 @@
-import { resolveComponent as C, openBlock as d, createElementBlock as o, Fragment as b, createTextVNode as k, createVNode as w, withCtx as B, mergeProps as u, normalizeClass as _, createElementVNode as s, toHandlers as h, renderSlot as P, createCommentVNode as m, renderList as U, toDisplayString as v } from "vue";
+import { resolveComponent as w, openBlock as d, createElementBlock as o, Fragment as b, createTextVNode as k, createVNode as C, withCtx as B, mergeProps as u, normalizeClass as _, createElementVNode as s, toHandlers as h, renderSlot as P, createCommentVNode as m, renderList as U, toDisplayString as v } from "vue";
 const R = {
   emits: ["pagination-change-page"],
   props: {
@@ -171,10 +171,10 @@ const R = {
   class: "sr-only"
 }, $ = ["tabindex"], j = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1), L = /* @__PURE__ */ s("span", { class: "sr-only" }, "Next", -1);
 function S(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
+  const p = w("RenderlessPagination");
   return d(), o(b, null, [
     k("BS4 "),
-    w(p, {
+    C(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
@@ -284,10 +284,10 @@ const ie = /* @__PURE__ */ E(A, [["render", S]]), M = {
   }
 }, V = ["tabindex"], T = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xAB", -1), F = ["aria-current"], H = ["tabindex"], q = /* @__PURE__ */ s("span", { "aria-hidden": "true" }, "\xBB", -1);
 function G(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
+  const p = w("RenderlessPagination");
   return d(), o(b, null, [
     k("BS5 "),
-    w(p, {
+    C(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
@@ -375,7 +375,7 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
     itemClasses: {
       type: Array,
       default: () => [
-        "bg-red-300",
+        "bg-white",
         "text-gray-500",
         "border-gray-300",
         "hover:bg-gray-50"
@@ -425,10 +425,10 @@ const re = /* @__PURE__ */ E(M, [["render", G]]), I = {
   })
 ], -1);
 function ae(e, n, t, i, l, f) {
-  const p = C("RenderlessPagination");
+  const p = w("RenderlessPagination");
   return d(), o("div", J, [
     s("span", K, "Showing " + v(t.data.from) + " to " + v(t.data.to) + " of " + v(t.data.total), 1),
-    w(p, {
+    C(p, {
       data: t.data,
       limit: t.limit,
       "keep-length": t.keepLength,
