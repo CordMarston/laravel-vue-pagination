@@ -76,7 +76,7 @@
 </template>
 <style>
 .vs__dropdown-menu {
-    min-width: 100px!important;
+    min-width:100px!important;
 }
 </style>
 <script>
