@@ -32,7 +32,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "@popperjs/core": "^2.11.8",
+    "vue": "^3.2.47",
+    "vue-select": "https://github.com/CordMarston/vue-select/tarball/master"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
