@@ -74,9 +74,9 @@
         </div>
     </div>
 </template>
-<style scroped>
+<style>
 * {
-    --vs-dropdown-min-width: 100px;
+    --vs-dropdown-min-width: 100px!important;
 }
 </style>
 <script>
