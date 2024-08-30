@@ -7,6 +7,7 @@
                 :data="data"
                 :limit="limit"
                 :keep-length="keepLength"
+                :showElipses="showElipses"
                 @pagination-change-page="onPaginationChangePage"
                 v-slot="slotProps"
             >

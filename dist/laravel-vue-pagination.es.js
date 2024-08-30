@@ -2147,6 +2147,7 @@ function ui(e, t, a, i, n, o) {
         data: a.data,
         limit: a.limit,
         "keep-length": a.keepLength,
+        showElipses: a.showElipses,
         onPaginationChangePage: o.onPaginationChangePage
       }, {
         default: Oe((s) => [
@@ -2185,7 +2186,7 @@ function ui(e, t, a, i, n, o) {
           ], 16)) : H("", !0)
         ]),
         _: 3
-      }, 8, ["data", "limit", "keep-length", "onPaginationChangePage"]),
+      }, 8, ["data", "limit", "keep-length", "showElipses", "onPaginationChangePage"]),
       we(r, {
         class: "small ml-1",
         options: a.sizeOptions,
