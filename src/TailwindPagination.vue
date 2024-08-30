@@ -118,7 +118,7 @@ export default {
         },
         limit: {
             type: Number,
-            default: 0
+            default: 3
         },
         keepLength: {
             type: Boolean,
