@@ -100,6 +100,7 @@ export default {
             var size = this.keepLength;
             var last = this.lastPage;
             var delta = this.limit;
+            var showElipses = this.showElipses;
             var left = current - delta;
             var right = current + delta;
             var leftPad = (delta + 2) * 2;
@@ -136,7 +137,7 @@ export default {
                     if (i - l === 2) {
                         pages.push(l + 1);
                     } else if (i - l !== 1) {
-                        if(this.showElipses) {
+                        if(showElipses) {
                             pages.push('...');
                         }
                     }
