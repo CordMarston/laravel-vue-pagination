@@ -15,6 +15,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        showElipses: {
+            type: Boolean,
+            default: false
+        },
     },
 
     computed: {
@@ -132,7 +136,9 @@ export default {
                     if (i - l === 2) {
                         pages.push(l + 1);
                     } else if (i - l !== 1) {
-                        pages.push('...');
+                        if(this.showElipses) {
+                            pages.push('...');
+                        }
                     }
                 }
                 pages.push(i);

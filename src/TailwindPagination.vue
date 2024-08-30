@@ -66,7 +66,7 @@
                     </button>
                 </nav>
             </RenderlessPagination>
-            <v-select class="small" :options="sizeOptions" @option:selected="sizeChanged" v-model="pageS" append-to-body :calculate-position="withPopper" :clearable="false" :selectOnTab="true">
+            <v-select class="small ml-1" :options="sizeOptions" @option:selected="sizeChanged" v-model="pageS" append-to-body :calculate-position="withPopper" :clearable="false" :selectOnTab="true">
                 <template #option="option">
                     <span class="text-xs">{{ option.label }}</span>
                 </template>
@@ -104,6 +104,10 @@ export default {
         }
     },
     props: {
+        showElipses: {
+            type: Boolean,
+            default: false
+        },
         sizeOptions: {
             type: Array,
             default: [5, 10, 20, 30, 40, 50]
